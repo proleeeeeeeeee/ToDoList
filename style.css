@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 100%;
+    background: black;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.card{
+    background:#cccccc;
+    width: 100%;
+    max-width: 540px;
+    margin: 150px auto;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.titleSection{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+.fa-book{
+    font-size: 25px;
+}
+
+.input-section{
+    background-color: #1e1919;
+    border-radius: 40px;
+    padding-left: 15px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-section input{
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+}
+
+.input-section button{
+    border: none;
+    outline:none;
+    background: #FF5C00;
+    font-size: 15px;
+    border-radius: 40px;
+    padding: 20px 50px;
+    color: white;
+    cursor: pointer;
+}
+
+#toDoListSection li{
+    list-style: none;
+    padding: 12px 8px 12px 50px;
+    font-size: 17px;
+    cursor: pointer;
+    position: relative;
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#toDoListSection li.checked::before{
+    content: ""; 
+    position: absolute;
+    border-color: #fff;
+    border-style: solid; /*this is the tick shape*/
+    border-width: 0 2px 2px 0; /*this is the tick shape*/
+    top: 10px; /*this is the tick position*/
+    left: 16px; /*this is the tick position*/
+    transform: rotate(45deg); /*this is the tick rotation*/
+    height: 15px; /*this is the tick height*/
+    width: 7px; /* this it the tick width*/
+}
+
+#toDoListSection li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+#toDoListSection li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+#toDoListSection li span:hover{
+    background: #888;
+}
+
